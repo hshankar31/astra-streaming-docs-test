@@ -27,9 +27,9 @@ input {
 }
 
 .cloud-aws { border-color: #f59e0b; }
-.cloud-gcp { border-color: #3b82f6; }
+.cloud-gcp { border-color: #3bf664; }
 .cloud-azure { border-color: #2563eb; }
-.cloud-self { border-color: #22c55e; }
+.cloud-self { border-color: #bc06ee; }
 
 .meta {
   font-size: 0.8rem;

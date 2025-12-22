@@ -8,13 +8,14 @@ class Cluster {
     return "https://" + template
       .replace("{env}", this.env)
       .replace("{region}", this.region)
+      .replace("{client}", this.client)
       .replace("{cloud}", this.cloud);
   }
 
   links() {
     return {
       grafana: this.buildUrl(this.domains.grafana),
-      splunk: this.buildUrl(this.domains.splunk),
+      prometheus: this.buildUrl(this.domains.prometheus),
       cluster: this.buildUrl(this.domains.cluster)
     };
   }

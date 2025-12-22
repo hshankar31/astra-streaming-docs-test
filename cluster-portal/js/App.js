@@ -83,10 +83,10 @@ class App {
     card.className = `card cloud-${cluster.cloud}`;
 
     card.innerHTML = `
-      <h4>${cluster.name}</h4>
-      <div class="meta">${cluster.env} • ${cluster.region}</div>
+      <h4>${cluster.region} • ${cluster.project}</h4>
+      <div class="meta">${cluster.name}</div>
       <a href="${links.grafana}" target="_blank">Grafana</a>
-      <a href="${links.splunk}" target="_blank">Splunk</a>
+      <a href="${links.prometheus}" target="_blank">Prometheus</a>
       <a href="${links.cluster}" target="_blank">Cluster UI</a>
     `;
     return card;
