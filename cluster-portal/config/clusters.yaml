@@ -1,0 +1,21 @@
+domains:
+  grafana: "{env}.{region}.{cloud}.grafana.com"
+  splunk: "{env}.{region}.{cloud}.splunk.com"
+  cluster: "{env}.{region}.{cloud}.cluster.example.com"
+
+clusters:
+  - name: Pulsar Dev
+    env: dev
+    cloud: aws
+    region: us-east4
+
+  - name: Kafka Prod
+    env: prod
+    cloud: gcp
+    region: europe-west1
+
+  - name: Staging Infra
+    env: staging
+    cloud: azure
+    region: central-us
+

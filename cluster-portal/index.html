@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cluster Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <h1>🔗 Cluster Portal</h1>
+
+  <input
+    id="search"
+    placeholder="Search (env / region / name) — press /"
+    autofocus
+  />
+
+  <div id="root"></div>
+
+  <!-- YAML parser -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+
+  <!-- App scripts -->
+  <script src="js/ConfigLoader.js"></script>
+  <script src="js/Cluster.js"></script>
+  <script src="js/App.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+body {
+  font-family: system-ui;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 2rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 5px solid #64748b;
+}
+
+.cloud-aws { border-color: #f59e0b; }
+.cloud-gcp { border-color: #3b82f6; }
+.cloud-azure { border-color: #2563eb; }
+.cloud-self { border-color: #22c55e; }
+
+.meta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+a {
+  display: block;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
