@@ -42,3 +42,19 @@ cluster-portal/
 │   └── ConfigLoader.js     # Loads YAML / JSON config via fetch
 └── config/
     └── clusters.yaml       # Main configuration file (edit this most)
+```
+---
+
+
+## 🛠 Start the Local Server
+
+From the project root. Install http-server if not pre-installed.
+``` 
+npm install -g http-server 
+```
+Then now just start
+``` 
+http-server 
+```
+
+---
