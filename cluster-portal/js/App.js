@@ -7,16 +7,29 @@ class App {
   }
 
   async init() {
-    const config = await ConfigLoader.load("./config/clusters.yaml");
+    try {
+      const config = await ConfigLoader.loadConfig();
 
-    this.clusters = config.clusters.map(
-      c => new Cluster(c, config.domains)
-    );
+      this.clusters = config.clusters.map(
+        c => new Cluster(c, config.domains)
+      );
 
-    this.filtered = this.clusters;
-    this.bindSearch();
-    this.bindShortcuts();
-    this.render();
+      this.filtered = this.clusters;
+      this.bindSearch();
+      this.bindShortcuts();
+      this.render();
+    } catch (error) {
+      console.error('Failed to initialize app:', error);
+      this.showError('Failed to load cluster data. Please check the configuration.');
+    }
+  }
+
+  showError(message) {
+    this.root.innerHTML = `
+      <div style="padding: 20px; background: #fee; border: 1px solid #fcc; border-radius: 4px; color: #c00;">
+        <strong>Error:</strong> ${message}
+      </div>
+    `;
   }
 
   bindSearch() {
@@ -87,7 +100,6 @@ class App {
       <div class="meta">${cluster.name}</div>
       <a href="${links.grafana}" target="_blank">Grafana</a>
       <a href="${links.prometheus}" target="_blank">Prometheus</a>
-      <a href="${links.cluster}" target="_blank">Cluster UI</a>
     `;
     return card;
   }
